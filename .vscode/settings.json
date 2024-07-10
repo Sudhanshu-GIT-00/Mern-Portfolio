@@ -1,0 +1,6 @@
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "black-box.START_AUTO": false
+}
