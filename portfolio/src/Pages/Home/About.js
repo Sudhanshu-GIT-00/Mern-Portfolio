@@ -14,8 +14,8 @@ function About() {
     return (
         <div>
             <SectionTitle title="About" />
-            <div className='flex w-full items-center'>
-                <div className='h-[70vh] w-1/2'>
+            <div className='flex w-full items-center sm:flex-col'>
+                <div className='h-[70vh] w-1/2 sm:w-full'>
                     <lottie-player
                         src="https://assets6.lottiefiles.com/private_files/lf30_WdTEui.json"
                         background="transparent"
@@ -23,7 +23,7 @@ function About() {
                         autoplay
                     >    </lottie-player>
                 </div>
-                <div className='flex flex-col gap-5 w-1/2'>
+                <div className='flex flex-col gap-5 w-1/2 sm:w-full'>
                     <p className='text-white'>
                         and different soft skills to ensure personal and professional growth and in the end to contribute to the prosperity of the
                     </p>
