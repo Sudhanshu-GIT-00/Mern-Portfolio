@@ -1,0 +1,51 @@
+export const projects = [
+    {
+        technologies: [],
+        _id: "6686b08017660f41c59b275c13",
+        title: "React Developer",
+        image: "https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione tempore laboriosam, dicta cumque odit quia commodi ab sequi at fugiat eum architecto, aliquid animi impedit similique sint blanditiis aut.",
+        link: "/",
+    },
+    {
+        technologies: [],
+        _id: "6686b08017660f41c59b275c123",
+        title: "React dev",
+        image: "https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione tempore laboriosam, dicta cumque odit quia commodi ab sequi at fugiat eum architecto, aliquid animi impedit similique sint blanditiis aut.",
+        link: "/",
+    },
+    {
+        technologies: [],
+        _id: "6686b08017660f4c59b275c123",
+        title: "React ",
+        image: "https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione tempore laboriosam, dicta cumque odit quia commodi ab sequi at fugiat eum architecto, aliquid animi impedit similique sint blanditiis aut.",
+        link: "/",
+    },
+    {
+        technologies: [],
+        _id: "6686b08017660f4c59b275c123",
+        title: "React skills",
+        image: "https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione tempore laboriosam, dicta cumque odit quia commodi ab sequi at fugiat eum architecto, aliquid animi impedit similique sint blanditiis aut.",
+        link: "/",
+    },
+    {
+        technologies: [],
+        _id: "6686b08017660f41c9b275c123",
+        title: "MERN",
+        image: "https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione tempore laboriosam, dicta cumque odit quia commodi ab sequi at fugiat eum architecto, aliquid animi impedit similique sint blanditiis aut.",
+        link: "/",
+    },
+    {
+        technologies: [],
+        _id: "6686b08017660f4159b275c123",
+        title: "React Developer",
+        image: "https://www.hollywoodreporter.com/wp-content/uploads/2012/12/img_logo_blue.jpg?w=1440&h=810&crop=1",
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione tempore laboriosam, dicta cumque odit quia commodi ab sequi at fugiat eum architecto, aliquid animi impedit similique sint blanditiis aut.",
+        link: "/",
+    },
+
+]
