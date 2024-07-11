@@ -22,12 +22,16 @@ function Projects() {
                         </div>
                     ))}
                 </div>
-                <div className="flex flex-col gap-5">
-                    <h1 className="text-secondary text-xl">{projects[selectedItemIndex].title}</h1>
+                <div className="flex items-cent justify-center gap-10 sm:flex-col">
+                    <img src={projects[selectedItemIndex].image} alt="non" className='h-60 w-72 p-3 rounded' />
+                    <div className="flex flex-col gap-5">
+                        <h1 className="text-secondary text-xl">{projects[selectedItemIndex].title}</h1>
 
-                    {/* <h1 className="text-tertiary text-xl">{projects[selectedItemIndex].description}</h1> */}
+                        {/* <h1 className="text-tertiary text-xl">{projects[selectedItemIndex].description}</h1> */}
 
-                    <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nisi blanditiis officia non totam soluta aspernatur nihil animi odio saepe? Repudiandae rem labore natus distinctio doloremque enim quasi? Expedita, dolorem.</p>
+                        <p className='text-white'>{projects[selectedItemIndex].description}</p>
+                        <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nisi blanditiis officia non totam soluta aspernatur nihil animi odio saepe? Repudiandae rem labore natus distinctio doloremque enim quasi? Expedita, dolorem.</p>
+                    </div>
                 </div>
             </div>
         </div>
