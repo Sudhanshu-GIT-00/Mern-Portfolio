@@ -14,7 +14,7 @@ function Contact() {
     return (
         <div>
             <SectionTitle title="hello" />
-            <div className="flex">
+            <div className="flex sm:flex-col items-center justify-between">
                 <div className="flex flex-col gap-1">
                     <p className="text-tertiary ">{"{"}</p>
                     {Object.keys(user).map((key) => (
@@ -25,9 +25,20 @@ function Contact() {
                     ))}
                     <p className="text-tertiary ">{"}"}</p>
                 </div>
+
+                <div className='h-[400px]'>
+                    <lottie-player
+                        src="https://assets9.lottiefiles.com/packages/lf20_eroqjb7w.json"
+                        background="transparent"
+                        speed="1"
+                        autoplay
+                    >
+
+                    </lottie-player>
+                </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Contact
