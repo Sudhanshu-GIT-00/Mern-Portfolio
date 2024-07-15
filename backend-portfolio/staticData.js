@@ -27,46 +27,14 @@ const about = [
     },
 ];
 
-// experience section
-// const experience = [
-//     {
-//         title: "Hi, I'm",
-//         period: "Sudhanshu",
-//         company: "Ranjan",
-//         description: "I love programing and web Development. To Become a successful expert in the field of web development and network Associate by gaining my technical knowledge",
-//     },
-// ];
-
-// projects section
-// const projects = [
-//     {
-//         title: "Hi, I'm",
-//         description: "Sudhanshu",
-//         image: "Ranjan",
-//         link: "I am Building Portfolio using MERN",
-//         technolgies: "I love programing and web Development. To Become a successful expert in the field of web development and network Associate by gaining my technical knowledge",
-//     },
-// ];
-
-// courses section
-// const courses = [
-//     {
-//         title: "Hi, I'm",
-//         description: "Sudhanshu",
-//         image: "Ranjan",
-//         link: "I am Building Portfolio using MERN",
-
-//     },
-// ];
-
 // contact section
-// const contact = [
-//     {
-//         name: "Hi, I'm",
-//         gender: "Sudhanshu",
-//         email: "Ranjan",
-//         mobile: "I am Building Portfolio using MERN",
-//         age: "I love programing and web Development. To Become a successful expert in the field of web development and network Associate by gaining my technical knowledge",
-//         address: "Associate"
-//     },
-// ];
+const contact = [
+    {
+        name: "Sudhanshu Ranjan",
+        age: null,
+        gender: "Male",
+        gmail: "rsudhanshu119@gmail.com",
+        mobile: "+917979959747",
+        address: "INDIA",
+    }
+];
