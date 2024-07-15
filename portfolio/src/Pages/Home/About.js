@@ -21,7 +21,8 @@ function About() {
                         background="transparent"
                         speed="1"
                         autoplay
-                    >    </lottie-player>
+                    >
+                    </lottie-player>
                 </div>
                 <div className='flex flex-col gap-5 w-1/2 sm:w-full'>
                     <p className='text-white'>
@@ -32,7 +33,6 @@ function About() {
                     </p>
                 </div>
             </div>
-
             <div className='py-5'>
                 <h1 className='text-xl text-tertiary'>Nessus is a remote security scanning tool
                 </h1>

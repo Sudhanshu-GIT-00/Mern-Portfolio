@@ -8,7 +8,7 @@ function App() {
   const [showLoading, setShowLoading] = useState(true);
   return (
     <BrowserRouter>
-      {showLoading ? <Loader /> : null}
+      {/* {showLoading ? <Loader /> : null} */}
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
