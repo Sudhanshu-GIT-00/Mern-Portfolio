@@ -1,7 +1,8 @@
-const mongoogse = require("mongoogse");
+const mongoose = require("mongoose");
+
 
 // Intro Section Database schema 
-const introSchema = new mongoogse.Schema({
+const introSchema = new mongoose.Schema({
     welcomeText: {
         type: String,
         require: true,
@@ -21,11 +22,11 @@ const introSchema = new mongoogse.Schema({
     description: {
         type: String,
         require: true,
-    },
+    }
 });
 
 // about Section Database schema 
-const aboutSchema = new mongoogse.Schema({
+const aboutSchema = new mongoose.Schema({
     lottieURL: {
         type: String,
         require: true,
@@ -45,7 +46,7 @@ const aboutSchema = new mongoogse.Schema({
 });
 
 // experience section Database Schema
-const experienceSchema = new mongoogse.Schema({
+const experienceSchema = new mongoose.Schema({
     title: {
         type: String,
         require: true,
@@ -65,7 +66,7 @@ const experienceSchema = new mongoogse.Schema({
 });
 
 // projects section Database Schema
-const projectsSchema = new mongoogse.Schema({
+const projectsSchema = new mongoose.Schema({
     title: {
         type: String,
         require: true,
@@ -89,7 +90,7 @@ const projectsSchema = new mongoogse.Schema({
 });
 
 // Courses section Database Schema
-const coursesSchema = new mongoogse.Schema({
+const coursesSchema = new mongoose.Schema({
     title: {
         type: String,
         require: true,
@@ -109,7 +110,7 @@ const coursesSchema = new mongoogse.Schema({
 });
 
 // contact section Database Schema
-const contactSchema = new mongoogse.Schema({
+const contactSchema = new mongoose.Schema({
     name: {
         type: String,
         require: true,
@@ -137,10 +138,10 @@ const contactSchema = new mongoogse.Schema({
 });
 
 module.exports = {
-    Intro: mongoogse.module("intro", introSchema),
-    About: mongoogse.module("abouts", aboutSchema),
-    Experience: mongoogse.module("experience", experienceSchema),
-    Projects: mongoogse.module("projects", projectsSchema),
-    Courses: mongoogse.module("courses", coursesSchema),
-    Contact: mongoogse.module("contacts", contactSchema),
+    Intro: mongoose.model("intro", introSchema),
+    About: mongoose.model("abouts", aboutSchema),
+    Experience: mongoose.model("experience", experienceSchema),
+    Project: mongoose.model("projects", projectsSchema),
+    Course: mongoose.model("courses", coursesSchema),
+    Contact: mongoose.model("contacts", contactSchema)
 }

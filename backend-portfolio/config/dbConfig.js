@@ -1,7 +1,7 @@
-const mongoogse = require('mongoose');
-mongoogse.connect(process.env.mongo_url);
+const mongoose = require('mongoose');
+mongoose.connect(process.env.mongo_url);
 
-const connection = mongoogse.connection;
+const connection = mongoose.connection;
 
 connection.on('error', () => {
     console.log("Error connecting to Database");
