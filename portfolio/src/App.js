@@ -9,12 +9,10 @@ import { SetPortfolioData } from "./redux/rootSlice";
 
 function App() {
   const { loading, portfolioData } = useSelector((state) => state.root);
-  // const [showLoading, setShowLoading] = useState(false);
   const dispatch = useDispatch();
   const getPortfolioData = async () => {
     try {
       const response = await axios.get('/api/portfolio/get-portfolio-data');
-
       dispatch(SetPortfolioData(response.data));
     } catch (error) {
       console.log(error);
