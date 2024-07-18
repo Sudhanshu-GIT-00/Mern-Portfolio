@@ -10,7 +10,7 @@ const intros = [
 ];
 
 // about section 
-const about = [
+const abouts = [
     {
         lottieURL: "https://assets6.lottiefiles.com/private_files/lf30_WdTEui.json",
         description1: "and different soft skills to ensure personal and professional growth and in the end to contribute to the prosperity of the",
