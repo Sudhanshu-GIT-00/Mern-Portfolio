@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Loader from "./components/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { HideLoading, SetPortfolioData, ShowLoading } from "./redux/rootSlice";
+import Admin from "./Pages/Home/Admin/index";
 
 function App() {
   const { loading, portfolioData } = useSelector((state) => state.root);
@@ -40,6 +41,7 @@ function App() {
       {loading ? <Loader /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </BrowserRouter>
   );
