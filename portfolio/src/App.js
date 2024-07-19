@@ -5,22 +5,28 @@ import axios from "axios";
 import { useEffect } from "react";
 import Loader from "./components/Loader";
 import { useDispatch, useSelector } from "react-redux";
-import { SetPortfolioData } from "./redux/rootSlice";
+import { HideLoading, SetPortfolioData, ShowLoading } from "./redux/rootSlice";
 
 function App() {
   const { loading, portfolioData } = useSelector((state) => state.root);
   const dispatch = useDispatch();
   const getPortfolioData = async () => {
     try {
+      dispatch(ShowLoading());
       const response = await axios.get('/api/portfolio/get-portfolio-data');
       dispatch(SetPortfolioData(response.data));
+      dispatch(HideLoading());
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      dispatch(HideLoading());
+
     }
   }
 
   useEffect(() => {
-    getPortfolioData()
+    if (!portfolioData) {
+      getPortfolioData();
+    }
   }, []);
 
   useEffect(() => {

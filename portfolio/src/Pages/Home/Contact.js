@@ -3,18 +3,8 @@ import SectionTitle from '../../components/SectionTitle'
 import { useSelector } from 'react-redux';
 
 function Contact() {
-    // const user = {
-    //     name: "Sudhanshu Ranjan",
-    //     age: null,
-    //     gender: "Male",
-    //     gmail: "rsudhanshu119@gmail.com",
-    //     mobile: "+91 7979959747",
-    //     country: "INDIA"
-
-    // }
     const { loading, portfolioData } = useSelector((state) => state.root);
     const { contact } = portfolioData;
-    // const { lottieURL, description1, description2, skills } = contact;
 
     return (
         <div>
