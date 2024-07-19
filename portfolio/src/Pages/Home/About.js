@@ -1,23 +1,18 @@
 import React from 'react'
 import SectionTitle from '../../components/SectionTitle'
+import { useSelector } from "react-redux";
 
 function About() {
-    const skills = [
-        "JavaScript",
-        "React",
-        "Mongo DB",
-        "Express",
-        "Node JS",
-        "C",
-        "Python"
-    ]
+    const { loading, portfolioData } = useSelector((state) => state.root);
+    const { abouts } = portfolioData;
+    const { lottieURL, description1, description2, skills } = abouts;
     return (
         <div>
             <SectionTitle title="About" />
             <div className='flex w-full items-center sm:flex-col'>
                 <div className='h-[70vh] w-1/2 sm:w-full'>
                     <lottie-player
-                        src="https://assets6.lottiefiles.com/private_files/lf30_WdTEui.json"
+                        src={lottieURL}
                         background="transparent"
                         speed="1"
                         autoplay
@@ -26,10 +21,10 @@ function About() {
                 </div>
                 <div className='flex flex-col gap-5 w-1/2 sm:w-full'>
                     <p className='text-white'>
-                        and different soft skills to ensure personal and professional growth and in the end to contribute to the prosperity of the
+                        {description1 || ""}
                     </p>
                     <p className='text-white'>
-                        and different soft skills to ensure personal and professional growth and in the end to contribute to the prosperity of the
+                        {description2 || ""}
                     </p>
                 </div>
             </div>

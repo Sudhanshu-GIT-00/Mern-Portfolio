@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Loader from "./components/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { SetPortfolioData } from "./redux/rootSlice";

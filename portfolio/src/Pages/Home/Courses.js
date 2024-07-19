@@ -1,11 +1,12 @@
 import React from 'react'
 import SectionTitle from '../../components/SectionTitle'
-import { courses } from '../../resorces/courses';
+import { useSelector } from 'react-redux';
 
 
 function Courses() {
     const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
-
+    const { loading, portfolioData } = useSelector((state) => state.root);
+    const { courses } = portfolioData;
     return (
         <div>
             <SectionTitle title="Projects" />
