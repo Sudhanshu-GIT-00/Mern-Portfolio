@@ -1,6 +1,5 @@
 const router = require('express').Router();
-// const router = express.Router();
-const { Intro, About, Project, Contact, Experience, Course } = require('../models/portfolioModel');
+const { Intro, About, Project, Contact, Experience, Course, _id } = require('../models/portfolioModel');
 
 router.get('/get-portfolio-data', async (req, res) => {
     try {
@@ -25,5 +24,27 @@ router.get('/get-portfolio-data', async (req, res) => {
         // console.log(error);
     }
 });
+
+
+// intro section routes
+router.post("/update-intro", async (req, res) => {
+    try {
+        const intro = await Intro.findOneAndUpdate(
+            { _id: req.body._id },
+            req.body,
+            { new: true }
+        );
+        // console.log(intro);
+        res.status(200).send(
+            {
+                data: intro,
+                success: true,
+                message: "intro Update successfully"
+            }
+        );
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
 
 module.exports = router;
