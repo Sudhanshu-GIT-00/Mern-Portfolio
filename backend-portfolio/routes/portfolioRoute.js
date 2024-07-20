@@ -67,6 +67,21 @@ router.post("/update-about", async (req, res) => {
     } catch (error) {
         res.status(500).send(error);
     }
+});
+
+// add experience
+router.post("/add-experience", async (req, res) => {
+    try {
+        const experience = new Experience(req.body);
+        await experience.save();
+        res.status(200).send({
+            data: experience,
+            success: true,
+            message: "Experience added Successfully",
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
 })
 
 module.exports = router;

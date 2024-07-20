@@ -96,3 +96,7 @@ input:focus{
 textarea{
   height: 100px;
 }
+
+.ant-modal-wrap{
+  z-index: 50 !important;
+}
