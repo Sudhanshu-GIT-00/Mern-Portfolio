@@ -15,9 +15,17 @@ function AdminExperiences() {
     const onFinish = async (values) => {
         try {
             dispatch(ShowLoading());
-            const response = await axios.post("/api/portfolio/add-experience",
-                ...values,
-            );
+            let response;
+            if (selectedItemForEdit) {
+                response = await axios.post("/api/portfolio/update-experience", {
+                    ...values,
+                    _id: selectedItemForEdit._id,
+                });
+            } else {
+                response = await axios.post("/api/portfolio/add-experience",
+                    values
+                );
+            }
             dispatch(HideLoading());
             if (response.data.success) {
                 message.success(response.data.message)
@@ -55,7 +63,11 @@ function AdminExperiences() {
                         <h1>{experience.description}</h1>
                         <div className="flex justify-end gap-5 mt-5">
                             <button className="bg-red-500 text-white px-5 py-2 rounded-md">Delete</button>
-                            <button className="bg-primary text-white px-5 py-2 rounded-md">Edit</button>
+                            <button className="bg-primary text-white px-5 py-2 rounded-md"
+                                onClick={() => {
+                                    setSelectedItemForEdit(experience);
+                                    setShowAddEditModal(true);
+                                }}>Edit</button>
                         </div>
                     </div>
                 ))}
@@ -67,7 +79,9 @@ function AdminExperiences() {
                 footer={null}
                 onCancel={() => setShowAddEditModal(false)}
             >
-                <Form layout='vertical' onFinish={onFinish}>
+                <Form layout='vertical' onFinish={onFinish}
+                    initialValues={selectedItemForEdit}
+                >
                     <Form.Item name='title' label="Title">
                         <input placeholder="Title" />
                     </Form.Item>
@@ -85,7 +99,7 @@ function AdminExperiences() {
                         <button className="border-primary text-primary px-5 py-2" onClick={() => {
                             setShowAddEditModal(false);
                         }}>Cancel</button>
-                        <button className="bg-primary text-white px-5 py-2">Add
+                        <button className="bg-primary text-white px-5 py-2">
                             {selectedItemForEdit ? "Update" : "Add"}
                         </button>
                     </div>

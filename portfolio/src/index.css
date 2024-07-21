@@ -36,10 +36,10 @@ i:hover{
   font-size: 20px;
 }
 /* Loader */
-.k{
-  animation: k is infinite;
+.s{
+  animation: s is infinite;
 }
- @keyframes k{
+ @keyframes s{
   0%{
     opacity: 1;
   }
@@ -51,10 +51,10 @@ i:hover{
   }
  }
 
- .s{
-  animation: s is infinite;
+ .m{
+  animation: m is infinite;
 }
- @keyframes s{
+ @keyframes m{
   0%{
     opacity: 0.5;
   }
@@ -97,6 +97,3 @@ textarea{
   height: 100px;
 }
 
-.ant-modal-wrap{
-  z-index: 50 !important;
-}
