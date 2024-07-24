@@ -49,7 +49,6 @@ function AdminExperiences() {
             const response = await axios.post("/api/portfolio/delete-experience", {
                 _id: item._id,
             });
-
             dispatch(HideLoading());
             if (response.data.success) {
                 message.success(response.data.message)
@@ -72,10 +71,8 @@ function AdminExperiences() {
                     setSelectedItemForEdit(null);
                     setShowAddEditModal(true);
                 }}> Add Expeerience
-
                 </button>
             </div>
-
             <div className="grid grid-cols-4 gap-5 mt-5">
                 {experiences.map((experience) => (
                     <div className="shadow border p-5 border-gray-400 flex flex-col mt-5">
@@ -102,11 +99,10 @@ function AdminExperiences() {
                     </div>
                 ))}
             </div>
-
             {
                 (type === "add" ||
                     selectedItemForEdit) &&
-                <Modal
+                (<Modal
                     visible={showAddEditModal}
                     title={selectedItemForEdit ? "Edit Experience" : "Add Experience"}
                     footer={null}
@@ -130,18 +126,20 @@ function AdminExperiences() {
                         <Form.Item name='description' label="Description">
                             <input placeholder="Description" />
                         </Form.Item>
-
                         <div className="flex justify-end">
-                            <button className="border-primary text-primary px-5 py-2" onClick={() => {
-                                setShowAddEditModal(false);
-                                setSelectedItemForEdit(null);
-                            }}>Cancel</button>
+                            <button className="border-primary text-primary px-5 py-2"
+                                onClick={() => {
+                                    setShowAddEditModal(false);
+                                    setSelectedItemForEdit(null);
+                                }}
+                            >
+                                {/* Cancel*/}</button>
                             <button className="bg-primary text-white px-5 py-2">
                                 {selectedItemForEdit ? "Update" : "Add"}
                             </button>
                         </div>
                     </Form>
-                </Modal>
+                </Modal>)
             }
         </div>
     );
