@@ -9,7 +9,7 @@ function Courses() {
     const { courses } = portfolioData;
     return (
         <div>
-            <SectionTitle title="Projects" />
+            <SectionTitle title="Courses" />
             <div className='flex py-10 gap-20 sm:flex-col'>
                 <div className='flex flex-col gap-5 border-l-1 border-[#135e4c82] w-1/3 sm:flex-row sm:overflow-x-scroll sm:w-full'>
                     {courses.map((course, index) => (
@@ -30,8 +30,8 @@ function Courses() {
 
                         {/* <h1 className="text-tertiary text-xl">{projects[selectedItemIndex].description}</h1> */}
 
-                        {/* <p className='text-white'>{courses[selectedItemIndex].description}</p> */}
-                        <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nisi blanditiis officia non totam soluta aspernatur nihil animi odio saepe? Repudiandae rem labore natus distinctio doloremque enim quasi? Expedita, dolorem.</p>
+                        <p className='text-white'>{courses[selectedItemIndex].description}</p>
+                        {/* <p className='text-white'>{courses.description}</p> */}
                     </div>
                     <img src={courses[selectedItemIndex].image} alt="non" className='h-65 w-80 p-3 rounded' />
                 </div>

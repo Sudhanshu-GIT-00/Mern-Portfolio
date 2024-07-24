@@ -169,4 +169,54 @@ router.post("/delete-project", async (req, res) => {
     }
 });
 
+
+// add course
+router.post("/add-course", async (req, res) => {
+    try {
+        const course = new Course(req.body);
+        await course.save();
+        res.status(200).send({
+            data: course,
+            success: true,
+            message: "Course added Successfully",
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+// Update course
+router.post("/update-course", async (req, res) => {
+    try {
+        const course = await Course.findOneAndUpdate(
+            { _id: req.body._id },
+            req.body,
+            { new: true }
+        );
+        res.status(200).send({
+            data: course,
+            success: true,
+            message: "Course updated Successfully",
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+// delete course
+router.post("/delete-course", async (req, res) => {
+    try {
+        const course = await Course.findOneAndDelete(
+            { _id: req.body._id }
+        );
+        res.status(200).send({
+            data: course,
+            success: true,
+            message: "Course deleted Successfully",
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
 module.exports = router;

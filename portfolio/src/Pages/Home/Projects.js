@@ -31,7 +31,7 @@ function Projects() {
                         {/* <h1 className="text-tertiary text-xl">{projects[selectedItemIndex].description}</h1> */}
 
                         <p className='text-white'>{projects[selectedItemIndex].description}</p>
-                        <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nisi blanditiis officia non totam soluta aspernatur nihil animi odio saepe? Repudiandae rem labore natus distinctio doloremque enim quasi? Expedita, dolorem.</p>
+                        {/* <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam nisi blanditiis officia non totam soluta aspernatur nihil animi odio saepe? Repudiandae rem labore natus distinctio doloremque enim quasi? Expedita, dolorem.</p> */}
                     </div>
                 </div>
             </div>
