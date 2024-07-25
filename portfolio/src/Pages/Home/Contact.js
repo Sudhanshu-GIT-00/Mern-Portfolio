@@ -5,14 +5,14 @@ import { useSelector } from 'react-redux';
 function Contact() {
     const { loading, portfolioData } = useSelector((state) => state.root);
     const { contact } = portfolioData;
-
+    // contact._id = {};
     return (
         <div>
             <SectionTitle title="hello" />
             <div className="flex sm:flex-col items-center justify-between">
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col">
                     <p className="text-tertiary ">{"{"}</p>
-                    {Object.keys(contact).map((key) => (
+                    {Object.keys(contact).map((key) => key !== "_id" && (
                         <p className='ml-5 '>
                             <span className="text-tertiary">{key} : </span>
                             <span className="text-tertiary">{contact[key]}</span>
@@ -20,7 +20,6 @@ function Contact() {
                     ))}
                     <p className="text-tertiary ">{"}"}</p>
                 </div>
-
                 <div className='h-[400px]'>
                     <lottie-player
                         src="https://assets9.lottiefiles.com/packages/lf20_eroqjb7w.json"
@@ -28,7 +27,6 @@ function Contact() {
                         speed="1"
                         autoplay
                     >
-
                     </lottie-player>
                 </div>
             </div>

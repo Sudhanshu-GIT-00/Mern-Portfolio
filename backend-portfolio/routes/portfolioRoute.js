@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Intro, About, Project, Contact, Experience, Course, _id } = require('../models/portfolioModel');
+const User = require("../models/userModel");
 
 router.get('/get-portfolio-data', async (req, res) => {
     try {
@@ -119,7 +120,6 @@ router.post("/delete-experience", async (req, res) => {
 });
 
 
-
 // add Project
 router.post("/add-project", async (req, res) => {
     try {
@@ -218,5 +218,49 @@ router.post("/delete-course", async (req, res) => {
         res.status(500).send(error);
     }
 });
+
+// Update Contact 
+router.post("/update-contact", async (req, res) => {
+    try {
+        const contact = await Contact.findOneAndUpdate(
+            { _id: req.body._id },
+            req.body,
+            { new: true }
+        );
+        res.status(200).send({
+            data: contact,
+            success: true,
+            message: "Contact Updated Successfully",
+        });
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+// Admin Login 
+router.post("/admin-login", async (req, res) => {
+    try {
+        const user = await User.findOne({
+            username: req.body.username,
+            password: req.body.password
+        })
+        user.password = "";
+        if (user) {
+            res.status(200).send({
+                data: user,
+                success: true,
+                message: "Login Successfully",
+            });
+        } else {
+            res.status(200).send({
+                data: user,
+                success: false,
+                message: "Invalid Username or Password",
+            });
+        }
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
 
 module.exports = router;

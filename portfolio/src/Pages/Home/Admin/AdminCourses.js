@@ -75,7 +75,7 @@ function AdminCourses() {
                 }}> Add Course
                 </button>
             </div>
-            <div className="grid grid-cols-3 gap-5 mt-5">
+            <div className="grid grid-cols-3 gap-5 mt-5 sm:grid-cols-1">
                 {courses.map((course) => (
                     <div className="shadow border p-5 border-gray-400 flex flex-col mt-5 gap-5">
                         <h1 className='text-primary text-xl font-bold'>{course.title}</h1>
